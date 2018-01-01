@@ -1,0 +1,12 @@
+{% extends "success.html" %}
+{% include "index.html" %}
+
+{% block histogram %}
+  <img src="{{ histogram.imageHist.url }}" alt="">
+
+  <a href="{% url 'download' %}?filename={{ histogram.imageHist.name }}"
+  class="btn btn-warning" role="button">Download Histogram</a>
+
+  <a href="{% url 'equalize' %}?original={{ image.imageFile.name }}"
+  class="btn btn-danger" role="button">Equalize</a>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% block content %}
+{% include "index.html" %}
+
+  <form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <input type="file" name="image" multiple onChange="handleFiles(this.files)"><br>
+    <input type="submit" value="Upload Image">
+  </form>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% include "index.html" %}
+
+{% block content %}
+<div id="left">
+  <h1>Image</h1>
+  <img src="{{ eq_image.eqImage.url }}" alt="">
+  <a href="{% url 'download' %}?filename={{ eq_image.eqImage.name }}"
+  class="btn btn-primary" role="button">Download Equalized Image</a>
+</div>
+
+<div id="right">
+ <h1>Histogram</h1>
+ <img src="{{ eq_hist.eqHist.url }}" alt="">
+ <a href="{% url 'download' %}?filename={{ eq_hist.eqHist.name }}"
+ class="btn btn-primary" role="button">Download Equalized Histogram</a>
+</div>
+
+<footer>
+  <a href="{% url 'compare' %}"
+  class="btn btn-danger" role="button">Image comparison</a>
+</footer>
+{% endblock %}

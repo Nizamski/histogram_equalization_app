@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% include "index.html" %}
+
+{% block content %}
+
+  <div style="width:50%; float:left;">
+      <img src="{{ image.imageFile.url }}" alt="">
+  </div>
+
+  <div style="width:50%; float:left;">
+      <img src="{{ equalized_image.eqImage.url }}" alt="">
+  </div>
+
+{% endblock %}

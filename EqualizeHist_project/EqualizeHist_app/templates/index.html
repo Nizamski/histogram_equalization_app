@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav>
+  <ul class="nav flex-row">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'index' %}">Home Page</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'upload' %}">To upload...</a>
+    </li>
+  </ul>
+</nav>
+{% endblock %}
